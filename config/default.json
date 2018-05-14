@@ -1,0 +1,3 @@
+{
+  "mailSenderAPI": "http://ec2-13-210-176-90.ap-southeast-2.compute.amazonaws.com/api/sendMail"
+}

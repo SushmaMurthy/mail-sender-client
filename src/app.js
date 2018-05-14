@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MailClientModal from "./Components/MailClientModal";
-import ResponseMessageModal from "./Components/ResponseMessageModal";
+import MailClientModal from "./components/mail-client-model";
+import ResponseMessageModal from "./components/response-message-model";
 
 class App extends Component {
     constructor(props) {

@@ -53,7 +53,7 @@ class MailClientModal extends Component {
 				this.props.onComplete(this.state.apiResponse, true);
 			})
 			.catch(err => {
-				console.log("Error while sending email " + err);
+				console.log("Error while sending email " + JSON.stringify(err));
 				this.setState({ apiResponse: err });
 				this.props.onComplete(this.state.apiResponse, false);
 			});		
@@ -62,15 +62,16 @@ class MailClientModal extends Component {
 
 	}
 
+	// TODO fetch the api end point from config file
 	sendMail = async (self) => {
-		const response = await fetch('http://localhost:3001/api/mail-sender', {
+		const response = await fetch('http://ec2-13-210-176-90.ap-southeast-2.compute.amazonaws.com/api/sendMail', {
 			method: 'POST',
 			body: JSON.stringify({
-				"email": this.state.email,
+				"recipient": this.state.email,
 				"cc": this.state.carbonCopy,
 				"bcc": this.state.blindCarbonCopy,
 				"subject": this.state.emailSubject,
-				"body": this.state.emailBody
+				"text": this.state.emailBody
 			}),
 			headers: { "Content-Type": "application/json" }
 		});
