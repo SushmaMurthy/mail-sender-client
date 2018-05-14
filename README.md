@@ -3,18 +3,18 @@
 Mail Sender Client is a responsive Single Page Application to send email notifications. 
 Accepts input from user and sends notification by integrating with mail-sender-api service.
 
-##Technology Stack
+## Technology Stack
 * Bootstrap
 * ReactJs
 
-##User Inputs
+## User Inputs
 * `To - Mandatory - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
 * `CC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
 * `BCC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
 * `Subject - Mandatory - String`
 * `Text - Mandatory - Plain Text`
 
-##Samples
+## Samples
 * Valid Email address formats accepted by To, CC and BCC fields<br />
 `user@sample.com`<br />
 `123@sample.com`<br />
@@ -27,7 +27,7 @@ Accepts input from user and sends notification by integrating with mail-sender-a
 `@sample.com`<br />
 `user,123@sample.com`<br />
 
-##Responses
+## Responses
 * Success Response: `Yay! Email sent successfully!`
 <br />
 * Server Validation Error: `Aw, Snap! Invalid or missing parameters`
@@ -59,7 +59,7 @@ npm run build
 ## Deployment
 To deploy this application on web, There are many ways but chose to deploy statically to AWS S3 as it is quick and cost effective.
 
-###Steps:
+### Steps:
 * `Create AWS account or Sign into AWS console.`
 * `Navigate to S3 service and create new bucket.`
 * `Within the Properties tab of new bucket, open the Static Website Hosting tab, and select Enable website hosting. Fill in index.html for both the Index and Error Documents.`
