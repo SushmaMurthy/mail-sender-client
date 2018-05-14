@@ -1,0 +1,27 @@
+textarea{
+    max-height: 300px;
+}
+.modal-header {
+    background-color: #343a40;
+    color: white;
+  }
+.infoContainer{
+    text-align: center;
+    padding: 100px;
+}
+.root{
+    text-align: center;
+    align-items: center;
+}
+.h1{
+    padding: 50px;
+}
+body
+{
+    background-color: azure;
+}
+.response {
+    padding:50px;
+}
+
+
