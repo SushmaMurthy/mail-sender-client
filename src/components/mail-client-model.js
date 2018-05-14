@@ -22,7 +22,7 @@ class MailClientModal extends Component {
 				apiResponse: "",
 				modalIsOpen: false
 			};
-		this.onSubmit = this.handleSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDataChange = this.handleDataChange.bind(this);
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
@@ -77,7 +77,7 @@ class MailClientModal extends Component {
 		});
 		const body = await response.json();
 		if (response.status !== 200) {
-			throw Error(body);
+			throw Error(body.message, body.code);
 		}
 		return body;
 	};
@@ -92,7 +92,7 @@ class MailClientModal extends Component {
 					style={customStyles}
 					contentLabel="Mail client">
 
-					<form className="form-horizontal" onSubmit={this.onSubmit}>
+					<form className="form-horizontal" onSubmit={this.handleSubmit}>
 						<div className="modal-header">
 							<h5 className="modal-title">New message</h5>
 							<button type="button" className="close" onClick={this.closeModal}>
@@ -106,7 +106,7 @@ class MailClientModal extends Component {
 										<label for="email" className="col-sm-2 control-label">To</label>
 									</div>
 									<div className="col-md-11">
-										<input type="email" required multiple pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b" className="form-control" id="email" placeholder="Email" onChange={this.handleDataChange} />
+										<input type="email" required multiple className="form-control" id="email" placeholder="Email" onChange={this.handleDataChange} />
 									</div>
 								</div>
 							</div>
@@ -116,7 +116,7 @@ class MailClientModal extends Component {
 										<label for="email" className="col-sm-2 control-label">CC</label>
 									</div>
 									<div className="col-md-11">
-										<input type="email" multiple pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b" className="form-control" id="carbonCopy" placeholder="Carbon copy addresses..." onChange={this.handleDataChange} />
+										<input type="email" multiple className="form-control" id="carbonCopy" placeholder="Carbon copy addresses..." onChange={this.handleDataChange} />
 									</div>
 								</div>
 							</div>
@@ -126,7 +126,7 @@ class MailClientModal extends Component {
 										<label for="email" className="col-sm-2 control-label">BCC</label>
 									</div>
 									<div className="col-md-11">
-										<input type="email" multiple pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b" className="form-control" id="blindCarbonCopy" placeholder="Blind carbon copy addresses..." onChange={this.handleDataChange} />
+										<input type="email" multiple className="form-control" id="blindCarbonCopy" placeholder="Blind carbon copy addresses..." onChange={this.handleDataChange} />
 									</div>
 								</div>
 							</div>
@@ -150,7 +150,7 @@ class MailClientModal extends Component {
 						</div>
 						<div className="modal-footer">
 							<button type="button" className="btn btn-secondary" onClick={this.closeModal}>Close</button>
-							<button type="submit" className="btn btn-primary" onClick={this.sendMail}>Send mail</button>
+							<button type="submit" className="btn btn-primary" >Send mail</button>
 						</div>
 					</form>
 				</Modal>

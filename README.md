@@ -8,9 +8,9 @@ Accepts input from user and sends notification by integrating with mail-sender-a
 * ReactJs
 
 ## User Inputs
-* `To - Mandatory - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
-* `CC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
-* `BCC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by '.' characters`
+* `To - Mandatory - Single/Multiple email address seperated by comma and mandatory '@' followed by any alphanumeric characters`
+* `CC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by any alphanumeric characters`
+* `BCC - Optional - Single/Multiple email address seperated by comma and mandatory '@' followed by any alphanumeric characters`
 * `Subject - Mandatory - String`
 * `Text - Mandatory - Plain Text`
 
