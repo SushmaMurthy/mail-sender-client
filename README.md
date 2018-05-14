@@ -29,7 +29,7 @@ Accepts input from user and sends notification by integrating with mail-sender-a
 
 ## Responses
 * Success Response: `Yay! Email sent successfully!`
-* Server Validation Error: `Aw, Snap! Invalid or missing parameters`
+* Server Validation Error: `Aw, Snap! Invalid or missing parameters <parameter names>`
 * Error Response: `Aw, Snap! Internal error occurred, Please try again after sometime`
 
 ## Installation
