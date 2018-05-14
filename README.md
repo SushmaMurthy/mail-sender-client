@@ -44,10 +44,10 @@ Mail Sender API can be installed locally simply with NPM.
 npm install
 ```
 
-## Testing
+## Local Testing
 ```bash
 npm run start
-# App starts on port 3000 and Opens the UI in a default browser window
+# App starts on port 3000 and Opens the UI in a default browser window for local testing
 ```
 
 ## Build
@@ -55,6 +55,17 @@ npm run start
 npm run build
 # Builds the static content as a bundle, ready for web hosting
 ```
+
+## Deployment
+To deploy this application on web, There are many ways but chose to deploy statically to AWS S3 as it is quick and cost effective.
+
+###Steps:
+* `Create AWS account or Sign into AWS console.`
+* `Navigate to S3 service and create new bucket.`
+* `Within the Properties tab of new bucket, open the Static Website Hosting tab, and select Enable website hosting. Fill in index.html for both the Index and Error Documents.`
+* `Edit the bucket policy and grant permission to S3:GetObjects.`
+* `Add the contents of your build directory (created as part of npm run build command in local) to this bucket`
+* `Voila! App is hosted on Web now, Endpoint will be available in Static Website Hosting tab.`
 
 ## Future Enhancements & Notes
 * Implement User login/logout and handle sessions.
