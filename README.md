@@ -67,6 +67,7 @@ To deploy this application on web, There are many ways but chose to deploy stati
 
 ## Future Enhancements & Notes
 * Implement User login/logout and handle sessions.
+* Add security configuration to restrict access
 * Add environment specific configuration file support.
 * Tighten the input validations, especially Email address format.
 * Add unit and integration test scripts between UI and backend API.
